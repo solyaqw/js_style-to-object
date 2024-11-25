@@ -13,7 +13,7 @@ function convertToObject(sourceString) {
     const [key, value] = line.split(':').map((part) => part && part.trim());
 
     if (key && value) {
-      styleObject[key] = value.replace(';', '');
+      styleObject[key] = value;
     }
   }
 
