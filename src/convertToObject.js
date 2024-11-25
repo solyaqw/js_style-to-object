@@ -9,13 +9,13 @@ function convertToObject(sourceString) {
   const styleObject = {};
   const lines = sourceString.split(';').filter((line) => line.trim());
 
-  for (const line of lines) {
+  lines.forEach((line) => {
     const [key, value] = line.split(':').map((part) => part && part.trim());
 
     if (key && value) {
       styleObject[key] = value;
     }
-  }
+  });
 
   return styleObject;
 }
